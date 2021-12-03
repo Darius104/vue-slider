@@ -34,7 +34,16 @@ const app = new Vue({
         ]
     },
     methods:{
-
+        nextSlide: function(){
+            if( this.activeSlide < this.slides.length - 1 ){
+                this.activeSlide++;
+            }
+        },
+        bSlide: function(){
+            if( this.activeSlide > 0 ){
+                this.activeSlide--;
+            }
+        }
     }
 });
 
