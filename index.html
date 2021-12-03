@@ -21,6 +21,7 @@
                 <div class="big-images-container">
                     <!-- Single image container -->
                     <div class="single-image active">
+                        <!-- aggiungo contenuto ai tag html tramite le regole vue js -->
                         <img :src="slides[activeSlide].image" :alt="slides[activeSlide].title">
                         <div class="single-image-text">
                             <h3>{{ slides[activeSlide].title }}</h3>
@@ -32,17 +33,20 @@
                 <!-- Thumbs -->
                 <div class="thumbs">
                     <!-- Arrow up -->
+                    <!-- Funzione click per slide precedente -->
                     <div  @click="bSlide" class="arrow up">
                         <i class="fas fa-chevron-up"></i>
                     </div>
                     <!-- End Arrow up -->
     
                     <!-- Arrow down -->
+                    <!-- Funzione click per slide successiva -->
                     <div @click="nextSlide" class="arrow down">
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <!-- End Arrow down -->
-    
+                    
+                    <!-- per ogni elemento vado a stampare nel browser tutto il blocco div così da non ripetere codice nell'HTML -->
                     <div v-for = 'element, index in slides' class="single-thumb" :class = "{ 'active': index === activeSlide }">
                         <img :src="element.image" :alt="element.title">
                     </div>
