@@ -1,9 +1,9 @@
 Vue.config.devtools = true;
-
 const app = new Vue({
     el: '#root',
     data: {
         activeSlide: 0,
+
         slides: 
         [
             {
